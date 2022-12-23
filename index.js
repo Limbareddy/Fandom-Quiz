@@ -1,0 +1,43 @@
+var read = require("readline-sync");
+var score = 0;
+var username = read.question(" Hey whats your name ")
+console.log("hii  " + username + " Are You a Cricket Fan")
+console.log("Type answers in small letters")
+function display(question, answer) {
+  var useranswer = read.question(question);
+  if (useranswer == answer) {
+    console.log(" you are right")
+    score = score + 1;
+  } else {
+    console.log(" you are wrong")
+  } console.log(" you score -> " + score)
+  console.log("---------")
+}
+
+var questions = [{
+  question: "Do you know when india won first worldcup ",
+  answer: "1983",
+},
+{
+  question: "Under who's captiancy india won all icc trophies ",
+  answer: "dhoni",
+},
+{
+  question: "Who has highest score in international odi",
+  answer: "rohith sharma",
+},
+{
+  question: "At which stadium recently india made a history in tests ",
+  answer: "gabba",
+}, {
+  question: "Which player can able to break the sachin record ",
+  answer: "virat kohli",
+}]
+for (i = 0; i < questions.length; i++) {
+  var user = questions[i];
+  display(user.question, user.answer)
+}
+console.log("Your Final score  is ->: ", score)
+console.log("High Scores So Far");
+console.log("Sumanth ", 5);
+console.log("Nachi", 4);
