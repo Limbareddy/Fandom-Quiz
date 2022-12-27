@@ -1,4 +1,4 @@
 # Fandom-Quiz
 
-It is built using javascript.
-It asks questions on cricket and give you a final score
+<li>It is built using javascript.</li>
+<li>It asks questions on cricket and give you a final score</li>
