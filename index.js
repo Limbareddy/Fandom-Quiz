@@ -10,9 +10,10 @@ function display(question, answer) {
     score = score + 1;
   } else {
     console.log(" you are wrong")
-  } console.log(" you score -> " + score)
+  } console.log(" your score -> " + score)
   console.log("---------")
 }
+
 
 var questions = [{
   question: "Do you know when india won first worldcup ",
@@ -23,7 +24,7 @@ var questions = [{
   answer: "dhoni",
 },
 {
-  question: "Who has highest score in international odi",
+  question: "Who has highest score in international odi ",
   answer: "rohith sharma",
 },
 {
@@ -37,7 +38,30 @@ for (i = 0; i < questions.length; i++) {
   var user = questions[i];
   display(user.question, user.answer)
 }
-console.log("Your Final score  is ->: ", score)
-console.log("High Scores So Far");
-console.log("Sumanth ", 5);
-console.log("Nachi", 4);
+var highscores = [
+  {
+    name: "Sumanth ", score: "4",
+  },
+  {
+    name: "Nachi", score: "4"
+  }
+]
+
+
+for (j = 0; j < highscores.length; j++) {
+  var oldusers = highscores[j]
+  if (score > highscores[j].score) {
+    console.log(" You have scored high:", score);
+    console.log("Send me a screen shot to upload your score")
+  }
+  else {
+
+    console.log("Your Final score  is ->: ", score)
+    console.log("High Scores So Far");
+    console.log(oldusers);
+  }
+}
+
+
+
+// console.log("Nachi", 4);
