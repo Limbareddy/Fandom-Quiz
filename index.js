@@ -1,10 +1,12 @@
+// import chalk from 'chalk';
+
 var read = require("readline-sync");
 var score = 0;
 var username = read.question(" Hey whats your name ")
 console.log("hii  " + username + " Are You a Cricket Fan")
-console.log("Type answers in small letters")
+// console.log("Type answers in small letters")
 function display(question, answer) {
-  var useranswer = read.question(question);
+  var useranswer = read.question(question).toLowerCase();
   if (useranswer == answer) {
     console.log(" you are right")
     score = score + 1;
@@ -24,7 +26,7 @@ var questions = [{
   answer: "dhoni",
 },
 {
-  question: "Who has highest score in international odi ",
+  question: "Which indian has highest score in international odi ",
   answer: "rohith sharma",
 },
 {
@@ -43,25 +45,18 @@ var highscores = [
     name: "Sumanth ", score: "4",
   },
   {
-    name: "Nachi", score: "4"
+    name: "Nachi ", score: "3"
   }
 ]
 
-
+console.log(" Your score: ",score)
 for (j = 0; j < highscores.length; j++) {
-  var oldusers = highscores[j]
+  // var oldusers = highscores[j]
   if (score > highscores[j].score) {
-    console.log(" You have scored high:", score);
+    console.log(" You have scored high than", highscores[j].name);
     console.log("Send me a screen shot to upload your score")
   }
-  else {
 
-    console.log("Your Final score  is ->: ", score)
-    console.log("High Scores So Far");
-    console.log(oldusers);
-  }
-}
+ }
 
 
-
-// console.log("Nachi", 4);
